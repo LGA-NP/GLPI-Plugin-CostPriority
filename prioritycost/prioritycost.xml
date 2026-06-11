@@ -1,0 +1,48 @@
+<root>
+      <name>PriorityCost</name>
+      <key>prioritycost</key>
+      <state>stable</state>
+      <logo>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/blob/main/prioritycost/prioritycost.png</logo>
+      <description>
+         <short>
+            <en>Cost on Priority</en>
+            <fr>Gestion des coût par rapport à la priorité</fr>
+         </short>
+         <long> 
+            <en>This plugin allows you to assign costs to resolving or closing a ticket based on its priority</en>
+            <fr>Ce plugin permet d'attribuer des coût à la résolution ou la fermeture du ticket en fonction de sa priorité</fr>
+         </long>
+      </description>
+      <homepage>https://github.com/LGA-NP/GLPI-Plugin-CostPriority</homepage>
+      <download>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/tree/main/releases</download>
+      <issues>https://github.com/pluginsGLPI/example/issues</issues>
+      <readme>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/blob/main/README.md</readme>
+      <authors>
+         <author>Nexpoint Services</author>
+         <author>Ludovic Ganiche</author>
+      </authors>
+      <versions>
+         <version>
+            <num>2.6.5</num>
+            <compatibility>~11.0.0</compatibility>
+         </version>
+      </versions>
+      <langs>
+         <lang>en_GB</lang>
+         <lang>fr_FR</lang>
+      </langs>
+      <license>GPL v2+</license>
+      <tags>
+         <en>
+            <tag>prioritycost</tag>
+         </en>
+         <fr>
+            <tag>prioritycost</tag>
+         </fr>
+      </tags>
+      <screenshots>
+         <screenshot>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/tree/main/screenshots/SC1.png</screenshot>
+         <screenshot>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/tree/main/screenshots/SC2.png</screenshot>
+         <screenshot>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/tree/main/screenshots/SC3.png</screenshot>
+      </screenshots>
+</root>
