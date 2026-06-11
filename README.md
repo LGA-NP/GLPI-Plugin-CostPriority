@@ -1,1 +1,1 @@
-Tout le développement de mon plugin GLPI
+Tout le développement du plugin GLPI - PriorityCost
