@@ -1,5 +1,5 @@
 <root>
-      <name>PriorityCost</name>
+      <name>Priority Cost</name>
       <key>prioritycost</key>
       <state>stable</state>
       <logo>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/blob/main/prioritycost/prioritycost.png</logo>
@@ -14,7 +14,7 @@
          </long>
       </description>
       <homepage>https://github.com/LGA-NP/GLPI-Plugin-CostPriority</homepage>
-      <download>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/raw/refs/heads/main/releases/prioritycost-2.6.5.zip</download>
+      <download>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/raw/refs/heads/main/releases</download>
       <readme>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/blob/main/README.md</readme>
       <authors>
          <author>Nexpoint Services</author>
@@ -24,6 +24,7 @@
          <version>
             <num>2.6.5</num>
             <compatibility>~11.0.0</compatibility>
+			<download>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/raw/refs/heads/main/releases/prioritycost-2.6.5.zip</download>
          </version>
       </versions>
       <langs>
