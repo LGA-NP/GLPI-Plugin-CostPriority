@@ -24,7 +24,7 @@
          <version>
             <num>2.6.5</num>
             <compatibility>~11.0.0</compatibility>
-			<download>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/raw/refs/heads/main/releases/prioritycost-2.6.5.tar.gz</download>
+			<download_url>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/raw/refs/heads/main/releases/prioritycost-2.6.5.tar.gz</download_url>
          </version>
       </versions>
       <langs>
