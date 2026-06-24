@@ -2,6 +2,9 @@
 Session::checkRight('entity',READ);
 global $DB;
 $entity_id=(int)($_GET['id']??0);
+if (!Session::haveAccessToEntity($entity_id)) {
+    Html::displayRightError();
+}
 echo "<h3>".__('Priority Cost rules','prioritycost')."</h3>";
 echo "<table class='tab_cadre_fixe'><tr><th>".__('Priority')."</th><th>".__('Cost')."</th><th>".__('Associated budget')."</th></tr>";
 for($p=1;$p<=6;$p++){

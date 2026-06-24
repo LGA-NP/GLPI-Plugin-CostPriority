@@ -3,6 +3,9 @@ include('../../../inc/includes.php');
 Session::checkRight('entity',UPDATE);
 global $DB;
 $entity_id=(int)($_GET['entities_id']??0);
+if (!Session::haveAccessToEntity($entity_id)) {
+    Html::displayRightError();
+}
 if(isset($_POST['save'])){
    foreach($_POST['cost'] as $p=>$c){
       $DB->delete('glpi_plugin_prioritycost_rules',['entities_id'=>$entity_id,'priority'=>(int)$p]);
