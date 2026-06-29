@@ -2,7 +2,7 @@
       <name>Priority Cost</name>
       <key>prioritycost</key>
       <state>stable</state>
-      <logo>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/blob/main/prioritycost/prioritycost.png</logo>
+      <logo>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/blob/main/prioritycost/prioritycost.png?raw=true</logo>
       <description>
          <short>
             <en>Cost on Priority</en>
@@ -41,8 +41,8 @@
          </fr>
       </tags>
       <screenshots>
-         <screenshot>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/tree/main/screenshots/SC1.png</screenshot>
-         <screenshot>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/tree/main/screenshots/SC2.png</screenshot>
-         <screenshot>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/tree/main/screenshots/SC3.png</screenshot>
+         <screenshot>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/blob/main/screenshots/SC1.png?raw=true</screenshot>
+         <screenshot>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/tree/main/screenshots/SC2.png?raw=true</screenshot>
+         <screenshot>https://github.com/LGA-NP/GLPI-Plugin-CostPriority/tree/main/screenshots/SC3.png?raw=true</screenshot>
       </screenshots>
 </root>
