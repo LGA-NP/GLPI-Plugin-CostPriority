@@ -8,9 +8,9 @@ function plugin_init_prioritycost() {
 function plugin_version_prioritycost() {
    return [
       'name'=>'Priority Cost',
-      'version'=>'2.6.5',
+      'version'=>'2.6.6',
       'author'=>'NexPoint Services',
-      'license'=>'GPLv2+',
+      'license'=>'GPLv3+',
       'requirements'=>['glpi'=>['min'=>'11.0.0']]
    ];
 }
