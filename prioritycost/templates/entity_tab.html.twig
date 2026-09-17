@@ -1,0 +1,99 @@
+<h3>
+    <i class="fas fa-coins"></i>
+    {{ __('Priority Cost', 'prioritycost') }}
+</h3>
+
+{% if can_edit %}
+    <form method="post" action="{{ save_url }}">
+        <input type="hidden" name="_glpi_csrf_token" value="{{ csrf_token }}">
+        <input type="hidden" name="entities_id" value="{{ entity_id }}">
+
+        {% if not is_root %}
+            <div class="form-check mb-3">
+                <input type="checkbox" class="form-check-input" id="prioritycost-inherit"
+                       name="is_inherited" value="1"
+                       onchange="document.getElementById('prioritycost-fields').disabled = this.checked;"
+                       {% if is_inherited %}checked{% endif %}>
+                <label class="form-check-label" for="prioritycost-inherit">
+                    {{ __('Inherit configuration from the parent entity', 'prioritycost') }}
+                </label>
+            </div>
+        {% else %}
+            <p class="text-muted">
+                <em>{{ __('This is the root entity: it has no parent to inherit from.', 'prioritycost') }}</em>
+            </p>
+        {% endif %}
+
+        <fieldset id="prioritycost-fields" {% if is_inherited %}disabled{% endif %}>
+            <div class="mb-3">
+                <label class="form-label">{{ __('Associated budget', 'prioritycost') }}</label>
+                {{ budget_dropdown|raw }}
+                <div class="form-text">
+                    {{ __('This budget applies to every priority level below.', 'prioritycost') }}
+                </div>
+            </div>
+
+            <table class="table card-table">
+                <thead>
+                    <tr>
+                        <th>{{ __('Priority', 'prioritycost') }}</th>
+                        <th>{{ __('Cost', 'prioritycost') }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for priority, rule in rules %}
+                        <tr>
+                            <td><b>{{ __('Priority', 'prioritycost') }} {{ priority }}</b></td>
+                            <td>
+                                <input type="number" step="0.01" class="form-control"
+                                       name="cost[{{ priority }}]" value="{{ rule.cost }}">
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </fieldset>
+
+        <button type="submit" class="btn btn-primary" name="save" value="1">
+            <i class="fas fa-save"></i> {{ __('Save', 'prioritycost') }}
+        </button>
+    </form>
+{% else %}
+    {% if is_inherited %}
+        <p class="text-muted">
+            <em>{{ __('This entity inherits its configuration from a parent entity.', 'prioritycost') }}</em>
+        </p>
+    {% endif %}
+
+    <table class="table card-table">
+        <thead>
+            <tr>
+                <th>{{ __('Priority', 'prioritycost') }}</th>
+                <th>{{ __('Cost', 'prioritycost') }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for priority, rule in rules %}
+                <tr>
+                    <td><b>{{ __('Priority', 'prioritycost') }} {{ priority }}</b></td>
+                    <td>
+                        {% if rule.cost is not null %}
+                            {{ rule.cost }}
+                        {% else %}
+                            <em>{{ __('Not set', 'prioritycost') }}</em>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <p>
+        <b>{{ __('Associated budget', 'prioritycost') }}:</b>
+        {% if budget_name %}
+            {{ budget_name }}
+        {% else %}
+            <em>{{ __('None', 'prioritycost') }}</em>
+        {% endif %}
+    </p>
+{% endif %}
